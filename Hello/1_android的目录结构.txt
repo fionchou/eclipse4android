@@ -1,0 +1,5 @@
+1./Hello/src/com/example/hello 写功能的地方
+2./Hello/res/layout  写界面的地方
+3./Hello/res/values 写界面显示字的地方
+4./Hello/AndroidManifest.xml 写程序功能清单的地方
+5./Hello/res/drawable-hdpi 放图片的地方
