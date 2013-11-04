@@ -25,6 +25,55 @@ public class FileService {
 	 */
 	public void saveFile(String fileNameText, String fileContentText) throws IOException {
 		FileOutputStream outputStream = context.openFileOutput(fileNameText, Context.MODE_PRIVATE);
+		write(fileContentText, outputStream);
+	}
+	
+	/**
+	 * 保存文件
+	 * @param fileNameText 文件名称
+	 * @param fileContentText 文件内容
+	 * @throws IOException 
+	 */
+	public void saveFileAppend(String fileNameText, String fileContentText) throws IOException {
+		FileOutputStream outputStream = context.openFileOutput(fileNameText, Context.MODE_APPEND);
+		write(fileContentText, outputStream);
+	}
+	
+	/**
+	 * 保存文件
+	 * @param fileNameText 文件名称
+	 * @param fileContentText 文件内容
+	 * @throws IOException 
+	 */
+	public void saveFileReadable(String fileNameText, String fileContentText) throws IOException {
+		FileOutputStream outputStream = context.openFileOutput(fileNameText, Context.MODE_WORLD_READABLE);
+		write(fileContentText, outputStream);
+	}
+	
+	/**
+	 * 保存文件
+	 * @param fileNameText 文件名称
+	 * @param fileContentText 文件内容
+	 * @throws IOException 
+	 */
+	public void saveFileWriteable(String fileNameText, String fileContentText) throws IOException {
+		FileOutputStream outputStream = context.openFileOutput(fileNameText, Context.MODE_WORLD_WRITEABLE);
+		write(fileContentText, outputStream);
+	}
+	
+	/**
+	 * 保存文件
+	 * @param fileNameText 文件名称
+	 * @param fileContentText 文件内容
+	 * @throws IOException 
+	 */
+	public void saveFileRW(String fileNameText, String fileContentText) throws IOException {
+		FileOutputStream outputStream = context.openFileOutput(fileNameText, Context.MODE_WORLD_READABLE+Context.MODE_WORLD_WRITEABLE);
+		write(fileContentText, outputStream);
+	}
+
+	private void write(String fileContentText, FileOutputStream outputStream)
+			throws IOException {
 		outputStream.write(fileContentText.getBytes());
 		outputStream.close();
 	}
