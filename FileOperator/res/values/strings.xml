@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FileOperator</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="file_name_lable">请输入文件名称：</string>
+    <string name="file_content_lable">请输入文件内容：</string>
+    <string name="file_save_button_lable">保存</string>
+    
+    <string name="file_save_success">保存文件成功！</string>
+    <string name="file_save_fail">保存文件失败！</string>
+    
+    <string name="file_content_r_lable">读取的文件内容如下：</string>
+    <string name="file_read_button_lable">读取</string>
+    
+    <string name="file_read_success">读取文件成功！</string>
+    <string name="file_read_fail">读取文件失败！</string>
+        
+
+</resources>
