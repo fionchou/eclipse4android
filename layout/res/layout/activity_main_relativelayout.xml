@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+        >
+	    <TextView 
+	        android:layout_width="100dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/phone_number_lable"
+	        android:layout_marginTop="10dp"
+	        android:id="@+id/phone_number_lable_id"
+	        />
+	    <EditText 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:inputType="phone"
+	        android:id="@+id/phone_number"
+	        android:layout_toRightOf="@id/phone_number_lable_id"
+	        android:layout_marginLeft="5dp"
+	        />
+    </RelativeLayout>
+    
+     <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sms_content_lable"
+        />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minLines="3"
+        android:id="@+id/sms_content"
+        android:inputType="none"/>
+    
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sendsms_button_lable"
+        android:id="@+id/sendsms_button"
+        />
+    
+    
+
+</LinearLayout>
